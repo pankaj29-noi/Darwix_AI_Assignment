@@ -6,11 +6,8 @@ Scope: All four assessment questions
 
 ## Links to add before uploading
 
-- GitHub repository: `ADD_PUBLIC_OR_REVIEWER_ACCESSIBLE_GITHUB_URL`
-- Video walkthrough: `ADD_UNLISTED_YOUTUBE_OR_PUBLIC_DRIVE_URL`
-
-Do not submit until both placeholders above have been replaced in this file and in
-`DARWIX_AI_ASSIGNMENT_SUBMISSION.pdf`.
+- GitHub repository: `https://github.com/pankaj29-noi/Darwix_AI_Assignment`
+- Video walkthrough: `Not provided`
 
 ## What is included
 
