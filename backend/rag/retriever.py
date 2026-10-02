@@ -1,4 +1,4 @@
-"""FAISS retrieval with a NumPy fallback if the index cannot be built."""
+"""FAISS retrieval with an explicit NumPy fallback only when FAISS is unavailable."""
 
 from __future__ import annotations
 
@@ -7,6 +7,11 @@ from pathlib import Path
 import numpy as np
 
 from rag.schemas import RetrievedChunk
+
+try:
+    import faiss  # type: ignore
+except Exception:  # pragma: no cover - exercised in environments without FAISS.
+    faiss = None
 
 
 class VectorIndex:
@@ -23,25 +28,23 @@ class VectorIndex:
             self.backend = "empty"
             self._faiss = None
             return self.backend
-        self.matrix = np.ascontiguousarray(vectors.astype(np.float32))
-        try:
-            import faiss
 
+        self.matrix = np.ascontiguousarray(vectors.astype(np.float32))
+        if faiss is not None:
             index = faiss.IndexFlatIP(self.matrix.shape[1])
             index.add(self.matrix)
             self._faiss = index
             self.backend = "faiss"
-        except Exception:
-            self._faiss = None
-            self.backend = "numpy"
+            return self.backend
+
+        self._faiss = None
+        self.backend = "numpy"
         return self.backend
 
     def save(self, directory: Path) -> None:
         directory.mkdir(parents=True, exist_ok=True)
         np.save(directory / "vectors.npy", self.matrix)
-        if self._faiss is not None:
-            import faiss
-
+        if self._faiss is not None and faiss is not None:
             faiss.write_index(self._faiss, str(directory / "index.faiss"))
 
     def search(self, query: np.ndarray, limit: int) -> list[tuple[int, float]]:
@@ -49,7 +52,7 @@ class VectorIndex:
             return []
         query = np.ascontiguousarray(query.astype(np.float32).reshape(1, -1))
         k = min(limit, len(self.records))
-        if self._faiss is not None:
+        if self._faiss is not None and faiss is not None:
             scores, ids = self._faiss.search(query, k)
             pairs = []
             for score, index in zip(scores[0], ids[0]):

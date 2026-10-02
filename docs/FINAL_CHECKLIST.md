@@ -1,5 +1,7 @@
 # Final checklist
 
+Fresh verification run (current workspace): 34 tests passed, 0 failed, 1 warning.
+
 | Requirement | Implemented | Tested | Evidence | Status | Notes |
 | --- | --- | --- | --- | --- | --- |
 | Health qualification voice agent | Yes | Yes | `transcripts/q1/cooperative.json`, `tests/test_voice.py` | COMPLETE | Web session, not a phone number |
