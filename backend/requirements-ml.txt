@@ -1,0 +1,3 @@
+# Optional semantic embeddings. The default index is TF-IDF + FAISS so the
+# assignment runs offline. Install this only when you want MiniLM vectors.
+sentence-transformers>=3.0

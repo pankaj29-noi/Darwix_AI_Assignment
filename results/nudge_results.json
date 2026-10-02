@@ -1,0 +1,185 @@
+{
+  "runs": [
+    {
+      "scenario": "cross_sell",
+      "description": "Customer mentions a spouse and children during a health call.",
+      "signal_count": 1,
+      "nudge_count": 1,
+      "nudges": [
+        {
+          "type": "missed_opportunity",
+          "text": "Customer mentioned family members who may need cover. Ask whether a family floater is relevant.",
+          "confidence": 0.83,
+          "evidence": "My wife also needs cover, and we have two kids.",
+          "offset_ms": 6000
+        }
+      ]
+    },
+    {
+      "scenario": "multi_vehicle",
+      "description": "Customer mentions another vehicle.",
+      "signal_count": 2,
+      "nudge_count": 2,
+      "nudges": [
+        {
+          "type": "missed_opportunity",
+          "text": "Customer mentioned family members who may need cover. Ask whether a family floater is relevant.",
+          "confidence": 0.83,
+          "evidence": "I already insure my car, and my wife has another vehicle too.",
+          "offset_ms": 5000
+        },
+        {
+          "type": "missed_opportunity",
+          "text": "Customer mentioned another vehicle. Consider discussing the multi-vehicle option.",
+          "confidence": 0.86,
+          "evidence": "I already insure my car, and my wife has another vehicle too.",
+          "offset_ms": 5000
+        }
+      ]
+    },
+    {
+      "scenario": "compliance",
+      "description": "Agent moves toward eligibility without the waiting-period disclosure.",
+      "signal_count": 3,
+      "nudge_count": 2,
+      "nudges": [
+        {
+          "type": "compliance",
+          "text": "Required waiting-period disclosure may be missing. Confirm that disclosure before proceeding.",
+          "confidence": 0.88,
+          "evidence": "I can mark you eligible right now.",
+          "offset_ms": 0
+        },
+        {
+          "type": "buying_signal",
+          "text": "Customer showed a buying signal. Confirm needs and required disclosures before proceeding.",
+          "confidence": 0.84,
+          "evidence": "Great, I want to purchase today.",
+          "offset_ms": 5000
+        }
+      ]
+    },
+    {
+      "scenario": "frustration",
+      "description": "Customer becomes frustrated.",
+      "signal_count": 1,
+      "nudge_count": 1,
+      "nudges": [
+        {
+          "type": "frustration",
+          "text": "Customer appears frustrated. Acknowledge the concern before continuing.",
+          "confidence": 0.86,
+          "evidence": "This is ridiculous. I already told you my budget. You are not listening.",
+          "offset_ms": 4000
+        }
+      ]
+    },
+    {
+      "scenario": "callback",
+      "description": "Customer asks for a callback.",
+      "signal_count": 1,
+      "nudge_count": 1,
+      "nudges": [
+        {
+          "type": "callback",
+          "text": "Customer asked for a callback. Confirm the time and pause the pitch.",
+          "confidence": 0.86,
+          "evidence": "Can you call me back after 6? I am busy now.",
+          "offset_ms": 0
+        }
+      ]
+    },
+    {
+      "scenario": "payment",
+      "description": "Customer describes payment difficulty.",
+      "signal_count": 1,
+      "nudge_count": 1,
+      "nudges": [
+        {
+          "type": "payment_difficulty",
+          "text": "Consider the approved payment-support or callback path.",
+          "confidence": 0.84,
+          "evidence": "I cannot pay this month because my salary is delayed.",
+          "offset_ms": 0
+        }
+      ]
+    },
+    {
+      "scenario": "intent_shift",
+      "description": "Customer moves from premium talk to a claim.",
+      "signal_count": 1,
+      "nudge_count": 1,
+      "nudges": [
+        {
+          "type": "intent_shift",
+          "text": "The topic shifted from premium to claims. Acknowledge the new topic before returning to the previous one.",
+          "confidence": 0.7,
+          "evidence": "Actually I want to file a claim for last month's hospital bill.",
+          "offset_ms": 8000
+        }
+      ]
+    },
+    {
+      "scenario": "noisy",
+      "description": "Ambiguous noisy transcript. Nudges should stay off.",
+      "signal_count": 0,
+      "nudge_count": 0,
+      "nudges": []
+    },
+    {
+      "scenario": "neutral",
+      "description": "Short acknowledgements used as a false-positive check.",
+      "signal_count": 0,
+      "nudge_count": 0,
+      "nudges": []
+    },
+    {
+      "scenario": "full_demo",
+      "description": "One health call that passes several signal types while the replay is still running.",
+      "signal_count": 6,
+      "nudge_count": 5,
+      "nudges": [
+        {
+          "type": "missed_opportunity",
+          "text": "Customer mentioned family members who may need cover. Ask whether a family floater is relevant.",
+          "confidence": 0.83,
+          "evidence": "My wife also needs cover, and we have two kids.",
+          "offset_ms": 8000
+        },
+        {
+          "type": "compliance",
+          "text": "Required waiting-period disclosure may be missing. Confirm that disclosure before proceeding.",
+          "confidence": 0.88,
+          "evidence": "I can mark you eligible right now.",
+          "offset_ms": 18000
+        },
+        {
+          "type": "buying_signal",
+          "text": "Customer showed a buying signal. Confirm needs and required disclosures before proceeding.",
+          "confidence": 0.84,
+          "evidence": "I want to purchase today.",
+          "offset_ms": 26000
+        },
+        {
+          "type": "frustration",
+          "text": "Customer appears frustrated. Acknowledge the concern before continuing.",
+          "confidence": 0.86,
+          "evidence": "This is ridiculous. You are not listening.",
+          "offset_ms": 40000
+        },
+        {
+          "type": "callback",
+          "text": "Customer asked for a callback. Confirm the time and pause the pitch.",
+          "confidence": 0.86,
+          "evidence": "Can you call me back after 6? I am busy now.",
+          "offset_ms": 55000
+        }
+      ]
+    }
+  ],
+  "false_positive_check": {
+    "neutral_nudge_count": 0,
+    "noisy_nudge_count": 0,
+    "note": "Neutral and noisy replays are the false-positive check. Counts are from this run."
+  }
+}

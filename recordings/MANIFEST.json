@@ -1,0 +1,19 @@
+{
+  "notice": "SYNTHETIC DEMO AUDIO. These files were rendered with macOS say from written sentences. They are not live customer calls, not phone recordings, and not evidence of ASR accuracy.",
+  "files": [
+    {
+      "path": "recordings/q1/synthetic_greeting_en_IN.aiff",
+      "voice": "Aman en_IN",
+      "purpose": "Show that local English TTS can read a synthetic greeting."
+    },
+    {
+      "path": "recordings/q3_indonesia/greeting_damayanti.aiff",
+      "voice": "Damayanti id_ID",
+      "purpose": "Show that an Indonesian voice is installed on this machine."
+    }
+  ],
+  "missing": {
+    "filipino_or_tagalog_voice": "No fil-PH or Tagalog voice was present in say -v '?' on this machine.",
+    "live_test_calls": "REQUIRES MANUAL RECORDING by the candidate for the video and for any real microphone calls."
+  }
+}

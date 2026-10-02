@@ -1,0 +1,50 @@
+{
+  "scenario": "philippines:taglish",
+  "call_id": "37a94c0215564ac58948f2f068076cc3",
+  "final_state": "DISCOVERY",
+  "escalated": false,
+  "qualification": {},
+  "eligibility": null,
+  "mode": "mock_web",
+  "turns": [
+    {
+      "speaker": "agent",
+      "text": "Hi, magandang araw. Ako si Dana from Darwix Assurance. May one minute ka ba? Tatawag ako tungkol sa life insurance na pwedeng i-link sa bank account mo.",
+      "state": "CONSENT"
+    },
+    {
+      "speaker": "customer",
+      "text": "Yes I agree"
+    },
+    {
+      "speaker": "agent",
+      "text": "Anong klaseng life cover ang tinitingnan mo, individual o may rider?",
+      "state": "DISCOVERY",
+      "fallback": false,
+      "sources": []
+    },
+    {
+      "speaker": "customer",
+      "text": "Can you explain the rider? Medyo malabo yung coverage."
+    },
+    {
+      "speaker": "agent",
+      "text": "Kung medyo malabo ang coverage o ang rider, ang rider ay optional accident cover at ang coverage ay ang benefit sa policy. May rider na pwedeng idagdag para sa accident, kung pasado sa rules. Anong klaseng life cover ang tinitingnan mo, individual o may rider?",
+      "state": "DISCOVERY",
+      "fallback": false,
+      "sources": [
+        {
+          "record_id": "kb_ph_payment_c001",
+          "chunk_id": "chunk_001",
+          "title": "Premium Payment At Bank Referral",
+          "source": "philippines/payment_tl.md",
+          "source_url": "",
+          "section": "Payment",
+          "category": "faq",
+          "version": "1.0",
+          "score": 0.218
+        }
+      ]
+    }
+  ]
+}

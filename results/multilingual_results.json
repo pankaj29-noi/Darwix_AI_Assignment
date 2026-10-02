@@ -1,0 +1,141 @@
+{
+  "asr": {
+    "provider": "mock",
+    "model": "NOT MEASURED",
+    "languages_configured": [
+      "en",
+      "fil",
+      "tl",
+      "id"
+    ],
+    "code_switching": "Detector results below are text rules, not ASR quality.",
+    "approximate_quality": "NOT MEASURED",
+    "latency": "NOT MEASURED",
+    "observed_asr_errors": "NOT MEASURED",
+    "reason": "No ASR API key was configured. Mock ASR returns aligned text and does not recognize audio."
+  },
+  "tts": {
+    "provider": "mock",
+    "native_filipino_voice": "NOT MEASURED",
+    "native_indonesian_voice": "NOT MEASURED",
+    "note": "Server TTS did not synthesize audio. Browser voice selection has to be checked in the UI."
+  },
+  "detector_cases": [
+    {
+      "text": "Magkano yung premium per month?",
+      "expected": "taglish",
+      "actual": "taglish"
+    },
+    {
+      "text": "Wala pa akong beneficiary",
+      "expected": "tl",
+      "actual": "tl"
+    },
+    {
+      "text": "I need a life insurance policy",
+      "expected": "en",
+      "actual": "en"
+    },
+    {
+      "text": "Apakah tenor pembiayaan dapat diubah?",
+      "expected": "formal",
+      "actual": "formal"
+    },
+    {
+      "text": "Gue telat bayar cicilan, bisa nego denda nggak?",
+      "expected": "colloquial",
+      "actual": "colloquial"
+    },
+    {
+      "text": "Nyuwun sewu, cicilane telat, bayare piye?",
+      "expected": "javanese_regional",
+      "actual": "javanese_regional"
+    }
+  ],
+  "detector_mismatches": [],
+  "scenarios": [
+    {
+      "scenario": "philippines:cooperative",
+      "final_state": "END",
+      "escalated": false,
+      "fallback_seen": false,
+      "last_message": "Salamat sa oras mo. Tatapusin ko na ang call na ito. Ingat."
+    },
+    {
+      "scenario": "philippines:objection",
+      "final_state": "DISCOVERY",
+      "escalated": false,
+      "fallback_seen": false,
+      "last_message": "Kung masabi ng customer na mahal ang premium, huwag mag-promise ng discount na wala sa rate card. Kapag kulang ang balance bago ang due date, pwedeng ma-lapse ang policy. Pwedeng mag-schedule ng callback sa halip na ipilit ang sale. Anong klaseng life cover ang tinitingnan mo, individual o may rider?"
+    },
+    {
+      "scenario": "philippines:taglish",
+      "final_state": "DISCOVERY",
+      "escalated": false,
+      "fallback_seen": false,
+      "last_message": "Kung medyo malabo ang coverage o ang rider, ang rider ay optional accident cover at ang coverage ay ang benefit sa policy. May rider na pwedeng idagdag para sa accident, kung pasado sa rules. Anong klaseng life cover ang tinitingnan mo, individual o may rider?"
+    },
+    {
+      "scenario": "philippines:colloquial",
+      "final_state": "DISCOVERY",
+      "escalated": false,
+      "fallback_seen": false,
+      "last_message": "Kung masabi ng customer na mahal ang premium, huwag mag-promise ng discount na wala sa rate card. Kapag kulang ang balance bago ang due date, pwedeng ma-lapse ang policy. Pwedeng mag-schedule ng callback sa halip na ipilit ang sale. Anong klaseng life cover ang tinitingnan mo, individual o may rider?"
+    },
+    {
+      "scenario": "philippines:escalation",
+      "final_state": "ESCALATED",
+      "escalated": true,
+      "fallback_seen": false,
+      "last_message": "Sige po. Iko-connect kita sa isang tao mula sa team. Hindi na ako magpapatuloy sa qualification."
+    },
+    {
+      "scenario": "indonesia:cooperative",
+      "final_state": "END",
+      "escalated": false,
+      "fallback_seen": false,
+      "last_message": "Terima kasih atas waktunya. Saya akhiri percakapan ini."
+    },
+    {
+      "scenario": "indonesia:objection",
+      "final_state": "DISCOVERY",
+      "escalated": false,
+      "fallback_seen": false,
+      "last_message": "Jika nasabah mengatakan denda kemahalan atau belum gajian, jangan mengancam. Produk pembiayaan yang mana yang ingin kita bahas?"
+    },
+    {
+      "scenario": "indonesia:colloquial",
+      "final_state": "DISCOVERY",
+      "escalated": false,
+      "fallback_seen": false,
+      "last_message": "Cicilan yang jatuh tempo tetap harus dibayar, tapi dendanya nggak boleh dilebihin dari perjanjian. Kalau lagi berat, bisa minta callback buat bahas ulang tenor, bukan janji penghapusan denda. Mau bahas cicilan yang mana?"
+    },
+    {
+      "scenario": "indonesia:mixed",
+      "final_state": "DISCOVERY",
+      "escalated": false,
+      "fallback_seen": false,
+      "last_message": "Denda keterlambatan mengikuti perjanjian pembiayaan dan tidak boleh ditambah di luar perjanjian. Uang muka atau DP yang sudah dibayar tidak otomatis menggugurkan cicilan berikutnya. Ini data demo sintetis. Produk pembiayaan yang mana yang ingin kita bahas?"
+    },
+    {
+      "scenario": "indonesia:escalation",
+      "final_state": "ESCALATED",
+      "escalated": true,
+      "fallback_seen": false,
+      "last_message": "Baik. Saya hubungkan Bapak/Ibu dengan petugas. Saya tidak melanjutkan kualifikasi."
+    }
+  ],
+  "accent_test": {
+    "region": "Javanese-influenced Indonesian, Central Java, outside standard Jakarta speech",
+    "test_phrase": "Nyuwun sewu, cicilane telat, bayare piye?",
+    "expected_meaning": "Excuse me, the installment is late, how do I pay?",
+    "expected_transcript_if_normalized_to_standard_indonesian": "Permisi, cicilan telat, pembayaran bagaimana?",
+    "actual_transcript": "NOT MEASURED",
+    "asr_provider": "mock",
+    "observed_error": "NOT MEASURED. No cloud ASR credential is configured, so accent recognition accuracy was not measured.",
+    "lexicon_normalization_preview": "permisi, cicilan telat, pembayaran bagaimana?",
+    "fallback_behavior": "If ASR confidence were low, the bot would stay in Indonesian and ask the caller to repeat slowly. It would not switch to English. The lexicon preview above is only for text that is already transcribed.",
+    "low_confidence_fallback_response": "Maaf, saya kurang jelas mendengarnya. Bisa diulang pelan-pelan?",
+    "lexicon_normalization_actual": "permisi, cicilan telat, pembayaran bagaimana?"
+  }
+}

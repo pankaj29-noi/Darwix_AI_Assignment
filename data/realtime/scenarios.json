@@ -1,0 +1,75 @@
+{
+  "cross_sell": {
+    "description": "Customer mentions a spouse and children during a health call.",
+    "turns": [
+      {"t_ms": 0, "speaker": "agent", "text": "Thanks for taking the web session. What cover are you exploring?"},
+      {"t_ms": 6000, "speaker": "customer", "text": "My wife also needs cover, and we have two kids."}
+    ]
+  },
+  "multi_vehicle": {
+    "description": "Customer mentions another vehicle.",
+    "turns": [
+      {"t_ms": 0, "speaker": "agent", "text": "Tell me about the vehicles on the current policy."},
+      {"t_ms": 5000, "speaker": "customer", "text": "I already insure my car, and my wife has another vehicle too."}
+    ]
+  },
+  "compliance": {
+    "description": "Agent moves toward eligibility without the waiting-period disclosure.",
+    "turns": [
+      {"t_ms": 0, "speaker": "agent", "text": "I can mark you eligible right now."},
+      {"t_ms": 5000, "speaker": "customer", "text": "Great, I want to purchase today."}
+    ]
+  },
+  "frustration": {
+    "description": "Customer becomes frustrated.",
+    "turns": [
+      {"t_ms": 0, "speaker": "agent", "text": "Let me ask the budget question again."},
+      {"t_ms": 4000, "speaker": "customer", "text": "This is ridiculous. I already told you my budget. You are not listening."}
+    ]
+  },
+  "callback": {
+    "description": "Customer asks for a callback.",
+    "turns": [
+      {"t_ms": 0, "speaker": "customer", "text": "Can you call me back after 6? I am busy now."}
+    ]
+  },
+  "payment": {
+    "description": "Customer describes payment difficulty.",
+    "turns": [
+      {"t_ms": 0, "speaker": "customer", "text": "I cannot pay this month because my salary is delayed."}
+    ]
+  },
+  "intent_shift": {
+    "description": "Customer moves from premium talk to a claim.",
+    "turns": [
+      {"t_ms": 0, "speaker": "customer", "text": "The premium looks high for me."},
+      {"t_ms": 8000, "speaker": "customer", "text": "Actually I want to file a claim for last month's hospital bill."}
+    ]
+  },
+  "noisy": {
+    "description": "Ambiguous noisy transcript. Nudges should stay off.",
+    "turns": [
+      {"t_ms": 0, "speaker": "customer", "text": "uhhh hmm the the asdf policy thing maybe qwerty I dunno"}
+    ]
+  },
+  "neutral": {
+    "description": "Short acknowledgements used as a false-positive check.",
+    "turns": [
+      {"t_ms": 0, "speaker": "customer", "text": "Okay."},
+      {"t_ms": 3000, "speaker": "customer", "text": "Yes."},
+      {"t_ms": 6000, "speaker": "customer", "text": "I see."}
+    ]
+  },
+  "full_demo": {
+    "description": "One health call that passes several signal types while the replay is still running.",
+    "turns": [
+      {"t_ms": 0, "speaker": "agent", "text": "Hello, thanks for joining the web session about health cover."},
+      {"t_ms": 8000, "speaker": "customer", "text": "My wife also needs cover, and we have two kids."},
+      {"t_ms": 18000, "speaker": "agent", "text": "I can mark you eligible right now."},
+      {"t_ms": 26000, "speaker": "customer", "text": "I want to purchase today."},
+      {"t_ms": 40000, "speaker": "customer", "text": "This is ridiculous. You are not listening."},
+      {"t_ms": 55000, "speaker": "customer", "text": "Can you call me back after 6? I am busy now."},
+      {"t_ms": 70000, "speaker": "customer", "text": "uhhh asdf qwerty hmm I dunno"}
+    ]
+  }
+}

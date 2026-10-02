@@ -1,0 +1,62 @@
+{
+  "language": ["id"],
+  "locale": "id-ID",
+  "sector": "multifinance_consumer_finance",
+  "regional_accent": {
+    "name": "Javanese-influenced Indonesian",
+    "region": "Central Java, outside standard Jakarta speech",
+    "limitation": "This build does not claim accent recognition. Without an ASR key, actual transcript quality is NOT MEASURED."
+  },
+  "terminology": {
+    "cicilan": "the installment that is due",
+    "tenor": "the agreed length of the facility, often said in English",
+    "denda": "the late fee written in the contract",
+    "DP": "down payment, also called uang muka",
+    "jatuh_tempo": "the due date",
+    "angsuran": "a more formal word for the installment",
+    "pembiayaan": "the financing facility, not a generic loan slogan"
+  },
+  "politeness": {
+    "formal": "Saya, Bapak/Ibu, silakan, mohon. No threats and no invented waiver.",
+    "colloquial": "Shorter clauses, nggak, and direct time references. Still no threats.",
+    "register_rule": "Answer in the register the customer used. Do not flip a colloquial caller into sudden formal English."
+  },
+  "date_format": "D MMMM YYYY, for example 2 Oktober 2026. Spoken: besok, lusa, or tanggal plus month.",
+  "currency": {
+    "code": "IDR",
+    "spoken": "rupiah",
+    "example": "Rp 1.500.000 per bulan"
+  },
+  "asr": {
+    "provider_env": "ASR_PROVIDER",
+    "languages": ["id-ID"],
+    "loanwords": ["tenor", "DP", "installment"],
+    "regional_test": "Javanese-influenced phrase outside Jakarta"
+  },
+  "tts": {
+    "preferred_voices": ["id-ID"],
+    "compromise": "If the OS has no Indonesian voice, browser TTS may use another voice. The UI must show the voice name it actually selected."
+  },
+  "fallback": "Maaf, saya tidak punya informasi terverifikasi tentang itu di knowledge base. Saya bisa hubungkan Bapak/Ibu dengan petugas.",
+  "fallback_colloquial": "Maaf, saya nggak punya info yang terverifikasi soal itu. Mau saya hubungkan ke petugas?",
+  "examples": [
+    {
+      "id": "greeting",
+      "text": "Selamat pagi, Bapak/Ibu. Saya dari layanan pembiayaan. Cicilan Bapak/Ibu akan jatuh tempo. Apakah sekarang waktu yang tepat?",
+      "literal_translation_to_avoid": "Good morning sir or madam. I am from the financing service. Your installment will fall due. Is now the right time?",
+      "why_localization": "Jatuh tempo and cicilan are the words used on Indonesian collection and reminder calls. The greeting asks permission before discussing money, which matches formal call etiquette, instead of opening with an English due-date notice."
+    },
+    {
+      "id": "objection",
+      "text": "Saya mengerti, Pak. Kalau denda terasa berat karena belum gajian, saya tidak akan menjanjikan penghapusan. Kita bisa jadwalkan callback untuk bahas tenor, sesuai perjanjian pembiayaan.",
+      "literal_translation_to_avoid": "I understand sir. If the penalty feels heavy because you have not been paid, I will not promise a deletion. We can schedule a callback to discuss the tenor according to the financing agreement.",
+      "why_localization": "Denda, gajian, tenor, and pembiayaan are the local finance frame. The agent refuses a waiver without translating a generic hardship script, and does not threaten. That is the compliant local move."
+    },
+    {
+      "id": "payment",
+      "text": "DP yang sudah lunas tidak menghapus angsuran bulan ini. Cicilan tetap jalan sesuai tenor, dan denda hanya boleh sebesar yang tertulis di perjanjian.",
+      "literal_translation_to_avoid": "A down payment that is already paid does not erase this month's installment. The installment continues according to the tenor, and the penalty may only be as large as what is written in the agreement.",
+      "why_localization": "DP, angsuran, cicilan, tenor, and denda are used together the way multifinance agents speak. The point of the line is a local misconception, that a paid DP cancels the next installment, which a literal translation of a generic receipt would miss."
+    }
+  ]
+}

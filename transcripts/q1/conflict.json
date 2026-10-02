@@ -1,0 +1,86 @@
+{
+  "scenario": "health:conflict",
+  "call_id": "546adefb37f44b099f7eb00b31bb5915",
+  "final_state": "QUALIFICATION",
+  "escalated": false,
+  "qualification": {
+    "insurance_requirement": "health insurance",
+    "name": "Kabir Sen",
+    "age": 45
+  },
+  "eligibility": null,
+  "mode": "mock_web",
+  "turns": [
+    {
+      "speaker": "agent",
+      "text": "Hello, this is Dana from Darwix Health on a web session. I can help you check a health-insurance lead. Do you consent to continue and to let me use your answers for this qualification?",
+      "state": "CONSENT"
+    },
+    {
+      "speaker": "customer",
+      "text": "Yes I consent"
+    },
+    {
+      "speaker": "agent",
+      "text": "What kind of health insurance do you need?",
+      "state": "DISCOVERY",
+      "fallback": false,
+      "sources": []
+    },
+    {
+      "speaker": "customer",
+      "text": "I need health insurance."
+    },
+    {
+      "speaker": "agent",
+      "text": "What is your full name?",
+      "state": "QUALIFICATION",
+      "fallback": false,
+      "sources": []
+    },
+    {
+      "speaker": "customer",
+      "text": "My name is Kabir Sen."
+    },
+    {
+      "speaker": "agent",
+      "text": "What is your age in years?",
+      "state": "QUALIFICATION",
+      "fallback": false,
+      "sources": []
+    },
+    {
+      "speaker": "customer",
+      "text": "I am 30 years old."
+    },
+    {
+      "speaker": "agent",
+      "text": "Which city do you live in?",
+      "state": "QUALIFICATION",
+      "fallback": false,
+      "sources": []
+    },
+    {
+      "speaker": "customer",
+      "text": "I am 45 years old."
+    },
+    {
+      "speaker": "agent",
+      "text": "I heard two ages, 30 and 45. Which age should I keep?",
+      "state": "QUALIFICATION",
+      "fallback": false,
+      "sources": []
+    },
+    {
+      "speaker": "customer",
+      "text": "45"
+    },
+    {
+      "speaker": "agent",
+      "text": "Which city do you live in?",
+      "state": "QUALIFICATION",
+      "fallback": false,
+      "sources": []
+    }
+  ]
+}

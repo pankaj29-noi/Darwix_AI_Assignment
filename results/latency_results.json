@@ -1,0 +1,93 @@
+{
+  "scenario": "full_demo",
+  "speed": 0,
+  "speed_note": "Processing latency excludes intentional real-time sleep. Use scripts/replay_call.py --speed 1 for a wall-clock demo.",
+  "latency": {
+    "asr_ms": {
+      "p50": 0.0015840050764381886,
+      "p95": 0.0019207902369089425,
+      "n": 7
+    },
+    "signal_ms": {
+      "p50": 0.02854100603144616,
+      "p95": 0.039528704655822366,
+      "n": 7
+    },
+    "nudge_ms": {
+      "p50": 0.005583991878665984,
+      "p95": 0.008487506420351561,
+      "n": 7
+    },
+    "delivery_ms": {
+      "p50": 1.1308340035611764,
+      "p95": 1.3815913916914724,
+      "n": 7
+    },
+    "e2e_ms": {
+      "p50": 1.178540987893939,
+      "p95": 1.4268706931034103,
+      "n": 7
+    },
+    "llm_ms": "NOT MEASURED",
+    "llm_reason": "No live LLM call is made in the default nudge path. Template nudges are timed as nudge_ms.",
+    "asr_note": "asr_ms is the measured time of the mock ASR passthrough on aligned text. Cloud speech-recognition latency is NOT MEASURED."
+  },
+  "chunk_latencies_ms": [
+    {
+      "asr_ms": 0.0018339924281463027,
+      "signal_ms": 0.005333000444807112,
+      "llm_ms": "NOT MEASURED",
+      "nudge_ms": 0.00245800765696913,
+      "delivery_ms": 0.4019170009996742,
+      "e2e_ms": 0.41154200152959675
+    },
+    {
+      "asr_ms": 0.0016669946489855647,
+      "signal_ms": 0.04029100819025189,
+      "llm_ms": "NOT MEASURED",
+      "nudge_ms": 0.006124988431110978,
+      "delivery_ms": 1.1308340035611764,
+      "e2e_ms": 1.1789169948315248
+    },
+    {
+      "asr_ms": 0.0014159886632114649,
+      "signal_ms": 0.015500001609325409,
+      "llm_ms": "NOT MEASURED",
+      "nudge_ms": 0.004917004844173789,
+      "delivery_ms": 1.1567079927772284,
+      "e2e_ms": 1.178540987893939
+    },
+    {
+      "asr_ms": 0.0015419936971738935,
+      "signal_ms": 0.03774999640882015,
+      "llm_ms": "NOT MEASURED",
+      "nudge_ms": 0.009500014130026102,
+      "delivery_ms": 1.415665989043191,
+      "e2e_ms": 1.4644579932792112
+    },
+    {
+      "asr_ms": 0.0019579892978072166,
+      "signal_ms": 0.029417002224363387,
+      "llm_ms": "NOT MEASURED",
+      "nudge_ms": 0.005708003300242126,
+      "delivery_ms": 1.3020839978707954,
+      "e2e_ms": 1.3391669926932082
+    },
+    {
+      "asr_ms": 0.0015840050764381886,
+      "signal_ms": 0.02854100603144616,
+      "llm_ms": "NOT MEASURED",
+      "nudge_ms": 0.005583991878665984,
+      "delivery_ms": 1.0059159976663068,
+      "e2e_ms": 1.0416250006528571
+    },
+    {
+      "asr_ms": 0.0012920063454657793,
+      "signal_ms": 0.0117499876068905,
+      "llm_ms": "NOT MEASURED",
+      "nudge_ms": 0.0012080126907676458,
+      "delivery_ms": 0.3644579992396757,
+      "e2e_ms": 0.3787080058827996
+    }
+  ]
+}

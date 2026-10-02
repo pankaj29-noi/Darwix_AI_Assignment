@@ -1,0 +1,211 @@
+{
+  "scenario": "health:cooperative",
+  "call_id": "3ef060767dfb4b95b260c1aa60e04899",
+  "final_state": "END",
+  "escalated": false,
+  "qualification": {
+    "insurance_requirement": "health insurance",
+    "name": "Riya Sharma",
+    "age": 32,
+    "location": "Pune",
+    "family_coverage": "self",
+    "current_insurance": "none",
+    "budget_range": 2500,
+    "preferred_coverage": "5 lakh",
+    "urgency": "high",
+    "callback_preference": "tomorrow morning"
+  },
+  "eligibility": {
+    "eligible": true,
+    "status": "preliminarily_eligible",
+    "reasons": [
+      "age, city, and budget are inside the published qualification rules"
+    ]
+  },
+  "mode": "mock_web",
+  "turns": [
+    {
+      "speaker": "agent",
+      "text": "Hello, this is Dana from Darwix Health on a web session. I can help you check a health-insurance lead. Do you consent to continue and to let me use your answers for this qualification?",
+      "state": "CONSENT"
+    },
+    {
+      "speaker": "customer",
+      "text": "Yes, I consent to this call."
+    },
+    {
+      "speaker": "agent",
+      "text": "What kind of health insurance do you need?",
+      "state": "DISCOVERY",
+      "fallback": false,
+      "sources": []
+    },
+    {
+      "speaker": "customer",
+      "text": "I need health insurance."
+    },
+    {
+      "speaker": "agent",
+      "text": "What is your full name?",
+      "state": "QUALIFICATION",
+      "fallback": false,
+      "sources": []
+    },
+    {
+      "speaker": "customer",
+      "text": "My name is Riya Sharma."
+    },
+    {
+      "speaker": "agent",
+      "text": "What is your age in years?",
+      "state": "QUALIFICATION",
+      "fallback": false,
+      "sources": []
+    },
+    {
+      "speaker": "customer",
+      "text": "I am 32 years old."
+    },
+    {
+      "speaker": "agent",
+      "text": "Which city do you live in?",
+      "state": "QUALIFICATION",
+      "fallback": false,
+      "sources": []
+    },
+    {
+      "speaker": "customer",
+      "text": "I live in Pune."
+    },
+    {
+      "speaker": "agent",
+      "text": "Who should be covered: just you, or family members as well?",
+      "state": "QUALIFICATION",
+      "fallback": false,
+      "sources": []
+    },
+    {
+      "speaker": "customer",
+      "text": "Just me, no other people."
+    },
+    {
+      "speaker": "agent",
+      "text": "Do you currently have health insurance?",
+      "state": "QUALIFICATION",
+      "fallback": false,
+      "sources": []
+    },
+    {
+      "speaker": "customer",
+      "text": "I do not have current insurance."
+    },
+    {
+      "speaker": "agent",
+      "text": "What monthly budget do you have in mind, in rupees?",
+      "state": "QUALIFICATION",
+      "fallback": false,
+      "sources": []
+    },
+    {
+      "speaker": "customer",
+      "text": "My budget is 2500 rupees per month."
+    },
+    {
+      "speaker": "agent",
+      "text": "What sum insured would you like, for example 5 lakh?",
+      "state": "QUALIFICATION",
+      "fallback": false,
+      "sources": []
+    },
+    {
+      "speaker": "customer",
+      "text": "I prefer 5 lakh sum insured."
+    },
+    {
+      "speaker": "agent",
+      "text": "How soon do you want the policy to start?",
+      "state": "QUALIFICATION",
+      "fallback": false,
+      "sources": []
+    },
+    {
+      "speaker": "customer",
+      "text": "I want to start this month."
+    },
+    {
+      "speaker": "agent",
+      "text": "When is a good time for a callback if we need to follow up?",
+      "state": "QUALIFICATION",
+      "fallback": false,
+      "sources": []
+    },
+    {
+      "speaker": "customer",
+      "text": "What is the waiting period for pre-existing conditions?"
+    },
+    {
+      "speaker": "agent",
+      "text": "Pre-existing conditions are covered after a waiting period of 36 months. When is a good time for a callback if we need to follow up?",
+      "state": "FAQ",
+      "fallback": false,
+      "sources": [
+        {
+          "record_id": "kb_health_policy_c001",
+          "chunk_id": "chunk_001",
+          "title": "Health Insurance Coverage Rules",
+          "source": "health/coverage_policy.md",
+          "source_url": "",
+          "section": "Coverage",
+          "category": "coverage",
+          "version": "1.0",
+          "score": 0.3304
+        }
+      ]
+    },
+    {
+      "speaker": "customer",
+      "text": "Please call me tomorrow morning."
+    },
+    {
+      "speaker": "agent",
+      "text": "This lead looks preliminarily eligible under the qualification rules. This is not a final underwriting decision. A lead is qualified when age is from 18 to 65 inclusive, the city is serviceable, and the stated budget is at least 500 rupees per month. Customers outside this age band are not eligible for Darwix Health Shield.",
+      "state": "ELIGIBILITY",
+      "fallback": false,
+      "sources": [
+        {
+          "record_id": "kb_health_qualification_c001",
+          "chunk_id": "chunk_001",
+          "title": "Lead Qualification Rules",
+          "source": "health/qualification_rules.md",
+          "source_url": "",
+          "section": "Qualification",
+          "category": "qualification",
+          "version": "1.0",
+          "score": 0.2743
+        }
+      ]
+    },
+    {
+      "speaker": "customer",
+      "text": "Thank you, please continue."
+    },
+    {
+      "speaker": "agent",
+      "text": "Here is the call summary. insurance_requirement=health insurance, name=Riya Sharma, age=32, location=Pune, family_coverage=self, current_insurance=none, budget_range=2500, preferred_coverage=5 lakh, urgency=high, callback_preference=tomorrow morning. Status: preliminarily_eligible. Synthetic demo data only. Shall I end the web session?",
+      "state": "SUMMARY",
+      "fallback": false,
+      "sources": []
+    },
+    {
+      "speaker": "customer",
+      "text": "Yes, please end the call."
+    },
+    {
+      "speaker": "agent",
+      "text": "Thank you. I am ending this web session. A human team can follow the callback if one was requested.",
+      "state": "END",
+      "fallback": false,
+      "sources": []
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "embedding_model": "tfidf",
+  "vector_backend": "faiss",
+  "confidence_threshold": 0.12,
+  "rubric": "Top chunk category or record prefix, plus a required source phrase. Fallback cases must fallback.",
+  "results": [
+    {
+      "question": "What is the Darwix Health Shield product and the base sum insured?",
+      "question_type": "product",
+      "retrieved_record": "kb_health_product_c001",
+      "retrieved_chunk": "chunk_001",
+      "source": "health/product.md",
+      "relevance_score": 0.4464,
+      "expected_answer": "5 lakh",
+      "actual_answer": "Darwix Health Shield is the individual health insurance product. The sum insured on the base plan is 5 lakh rupees. An optional family floater covers a spouse and children under the same sum insured.",
+      "verdict": "CORRECT",
+      "fallback": false,
+      "generation_mode": "extractive"
+    },
+    {
+      "question": "What is the waiting period for pre-existing conditions and the room rent cap?",
+      "question_type": "policy",
+      "retrieved_record": "kb_health_policy_c001",
+      "retrieved_chunk": "chunk_001",
+      "source": "health/coverage_policy.md",
+      "relevance_score": 0.4166,
+      "expected_answer": "36 months",
+      "actual_answer": "Pre-existing conditions are covered after a waiting period of 36 months. Room rent on the base plan is capped at 1 percent of the sum insured per day.",
+      "verdict": "CORRECT",
+      "fallback": false,
+      "generation_mode": "extractive"
+    },
+    {
+      "question": "Who qualifies for Darwix Health Shield by age, city, and monthly budget?",
+      "question_type": "qualification",
+      "retrieved_record": "kb_health_qualification_c001",
+      "retrieved_chunk": "chunk_001",
+      "source": "health/qualification_rules.md",
+      "relevance_score": 0.2743,
+      "expected_answer": "18",
+      "actual_answer": "A lead is qualified when age is from 18 to 65 inclusive, the city is serviceable, and the stated budget is at least 500 rupees per month. Customers outside this age band are not eligible for Darwix Health Shield.",
+      "verdict": "CORRECT",
+      "fallback": false,
+      "generation_mode": "extractive"
+    },
+    {
+      "question": "How does cashless treatment work at network hospitals?",
+      "question_type": "faq",
+      "retrieved_record": "kb_health_faq_c001",
+      "retrieved_chunk": "chunk_001",
+      "source": "health/faq.md",
+      "relevance_score": 0.371,
+      "expected_answer": "cashless",
+      "actual_answer": "Cashless treatment is available at network hospitals.",
+      "verdict": "CORRECT",
+      "fallback": false,
+      "generation_mode": "extractive"
+    },
+    {
+      "question": "The customer says the premium is too expensive. How should the agent respond?",
+      "question_type": "objection",
+      "retrieved_record": "kb_health_objection_c001",
+      "retrieved_chunk": "chunk_001",
+      "source": "health/objections.md",
+      "relevance_score": 0.3078,
+      "expected_answer": "rate card",
+      "actual_answer": "If the customer says the premium is too expensive, explain the monthly budget option and the co-pay choice, and do not promise a discount that is not on the rate card. If the customer already has current insurance, ask what coverage gap they want filled rather than arguing.",
+      "verdict": "CORRECT",
+      "fallback": false,
+      "generation_mode": "extractive"
+    },
+    {
+      "question": "What is the capital of France?",
+      "question_type": "out_of_scope",
+      "retrieved_record": "kb_health_pii_demo_c001",
+      "retrieved_chunk": "chunk_001",
+      "source": "health/synthetic_pii.md",
+      "relevance_score": 0.0,
+      "expected_answer": "safe fallback",
+      "actual_answer": "I don't have verified information about that in my knowledge base. I can connect you with a human representative.",
+      "verdict": "CORRECT",
+      "fallback": true,
+      "generation_mode": "fallback"
+    }
+  ]
+}

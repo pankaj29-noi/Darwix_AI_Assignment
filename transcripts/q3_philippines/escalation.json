@@ -1,0 +1,38 @@
+{
+  "scenario": "philippines:escalation",
+  "call_id": "06853ebf919e41f3988a1f0bd2e1ce32",
+  "final_state": "ESCALATED",
+  "escalated": true,
+  "qualification": {},
+  "eligibility": null,
+  "mode": "mock_web",
+  "turns": [
+    {
+      "speaker": "agent",
+      "text": "Hi, magandang araw. Ako si Dana from Darwix Assurance. May one minute ka ba? Tatawag ako tungkol sa life insurance na pwedeng i-link sa bank account mo.",
+      "state": "CONSENT"
+    },
+    {
+      "speaker": "customer",
+      "text": "Oo, sige po."
+    },
+    {
+      "speaker": "agent",
+      "text": "Anong klaseng life cover ang tinitingnan mo, individual o may rider?",
+      "state": "DISCOVERY",
+      "fallback": false,
+      "sources": []
+    },
+    {
+      "speaker": "customer",
+      "text": "Pwede po ako makausap ng totoong tao?"
+    },
+    {
+      "speaker": "agent",
+      "text": "Sige po. Iko-connect kita sa isang tao mula sa team. Hindi na ako magpapatuloy sa qualification.",
+      "state": "ESCALATED",
+      "fallback": false,
+      "sources": []
+    }
+  ]
+}

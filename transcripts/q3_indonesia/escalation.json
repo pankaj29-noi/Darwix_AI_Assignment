@@ -1,0 +1,38 @@
+{
+  "scenario": "indonesia:escalation",
+  "call_id": "79d1b057f55c4b14a39082a9d6e3ea78",
+  "final_state": "ESCALATED",
+  "escalated": true,
+  "qualification": {},
+  "eligibility": null,
+  "mode": "mock_web",
+  "turns": [
+    {
+      "speaker": "agent",
+      "text": "Selamat pagi, Bapak/Ibu. Saya dari layanan pembiayaan. Cicilan Bapak/Ibu akan jatuh tempo. Apakah sekarang waktu yang tepat?",
+      "state": "CONSENT"
+    },
+    {
+      "speaker": "customer",
+      "text": "Ya, silakan."
+    },
+    {
+      "speaker": "agent",
+      "text": "Produk pembiayaan yang mana yang ingin kita bahas?",
+      "state": "DISCOVERY",
+      "fallback": false,
+      "sources": []
+    },
+    {
+      "speaker": "customer",
+      "text": "Saya mau bicara dengan petugas."
+    },
+    {
+      "speaker": "agent",
+      "text": "Baik. Saya hubungkan Bapak/Ibu dengan petugas. Saya tidak melanjutkan kualifikasi.",
+      "state": "ESCALATED",
+      "fallback": false,
+      "sources": []
+    }
+  ]
+}

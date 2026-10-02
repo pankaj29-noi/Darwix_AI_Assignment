@@ -1,0 +1,132 @@
+{
+  "health:cooperative": {
+    "turns": [
+      "Yes, I consent to this call.",
+      "I need health insurance.",
+      "My name is Riya Sharma.",
+      "I am 32 years old.",
+      "I live in Pune.",
+      "Just me, no other people.",
+      "I do not have current insurance.",
+      "My budget is 2500 rupees per month.",
+      "I prefer 5 lakh sum insured.",
+      "I want to start this month.",
+      "What is the waiting period for pre-existing conditions?",
+      "Please call me tomorrow morning.",
+      "Thank you, please continue.",
+      "Yes, please end the call."
+    ]
+  },
+  "health:objection": {
+    "turns": [
+      "Yes I agree",
+      "I need health insurance.",
+      "My name is Arjun Mehta.",
+      "I am 41 years old.",
+      "I live in Jaipur.",
+      "The premium is too expensive for me."
+    ]
+  },
+  "health:unsupported": {
+    "turns": [
+      "Yes I consent",
+      "I need health insurance.",
+      "What is the capital of France?",
+      "I want to speak to a human representative."
+    ]
+  },
+  "health:incomplete": {
+    "turns": [
+      "Yes I consent",
+      "I need health insurance.",
+      "My name is Neha Iyer.",
+      "I would rather not share more right now."
+    ]
+  },
+  "health:conflict": {
+    "turns": [
+      "Yes I consent",
+      "I need health insurance.",
+      "My name is Kabir Sen.",
+      "I am 30 years old.",
+      "I am 45 years old.",
+      "45"
+    ]
+  },
+  "philippines:cooperative": {
+    "turns": [
+      "Oo, sige po.",
+      "Gusto ko ng life insurance na naka-link sa bank.",
+      "Ako si Juan Dela Cruz.",
+      "Taga Quezon City ako.",
+      "May savings account ako sa partner bank.",
+      "Beneficiary ko si Maria Dela Cruz, asawa ko.",
+      "Kaya ko ang premium na 2000 pesos kada buwan.",
+      "Wala pa akong existing policy.",
+      "Tumawag kayo bukas ng umaga.",
+      "Sige, pakibuo ang usapan.",
+      "Oo"
+    ]
+  },
+  "philippines:objection": {
+    "turns": [
+      "Opo, sige.",
+      "Ang mahal naman ng premium, baka ma-lapse ako nito."
+    ]
+  },
+  "philippines:taglish": {
+    "turns": [
+      "Yes I agree",
+      "Can you explain the rider? Medyo malabo yung coverage."
+    ]
+  },
+  "philippines:colloquial": {
+    "turns": [
+      "Oo, sige.",
+      "Pre, ang mahal, di ko kaya yan."
+    ]
+  },
+  "philippines:escalation": {
+    "turns": [
+      "Oo, sige po.",
+      "Pwede po ako makausap ng totoong tao?"
+    ]
+  },
+  "indonesia:cooperative": {
+    "turns": [
+      "Ya, silakan.",
+      "Pembiayaan kendaraan.",
+      "Nama saya Sari Wulandari.",
+      "Cicilan saya 1500000.",
+      "Tenor 24 bulan.",
+      "Angsuran bulan ini sudah jatuh tempo.",
+      "Besok pagi.",
+      "Ya, buat ringkasannya.",
+      "Ya"
+    ]
+  },
+  "indonesia:objection": {
+    "turns": [
+      "Ya, silakan.",
+      "Dendanya kemahalan, saya belum gajian."
+    ]
+  },
+  "indonesia:colloquial": {
+    "turns": [
+      "Ya udah, gas.",
+      "Gue telat bayar cicilan, bisa nego denda nggak?"
+    ]
+  },
+  "indonesia:mixed": {
+    "turns": [
+      "Ya, silakan.",
+      "Tenornya bisa di-extend? DP saya sudah lunas tapi installment bulan ini berat."
+    ]
+  },
+  "indonesia:escalation": {
+    "turns": [
+      "Ya, silakan.",
+      "Saya mau bicara dengan petugas."
+    ]
+  }
+}

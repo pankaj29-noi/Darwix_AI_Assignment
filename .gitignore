@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.env
+*.db
+node_modules/
+dist/
+data/vector/
+data/app.db
+.DS_Store
+*.pyc
+.vite/
+coverage/

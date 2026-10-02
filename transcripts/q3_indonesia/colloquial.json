@@ -1,0 +1,50 @@
+{
+  "scenario": "indonesia:colloquial",
+  "call_id": "45890c281c894f5b8259db9ed1288e74",
+  "final_state": "DISCOVERY",
+  "escalated": false,
+  "qualification": {},
+  "eligibility": null,
+  "mode": "mock_web",
+  "turns": [
+    {
+      "speaker": "agent",
+      "text": "Selamat pagi, Bapak/Ibu. Saya dari layanan pembiayaan. Cicilan Bapak/Ibu akan jatuh tempo. Apakah sekarang waktu yang tepat?",
+      "state": "CONSENT"
+    },
+    {
+      "speaker": "customer",
+      "text": "Ya udah, gas."
+    },
+    {
+      "speaker": "agent",
+      "text": "Mau bahas cicilan yang mana?",
+      "state": "DISCOVERY",
+      "fallback": false,
+      "sources": []
+    },
+    {
+      "speaker": "customer",
+      "text": "Gue telat bayar cicilan, bisa nego denda nggak?"
+    },
+    {
+      "speaker": "agent",
+      "text": "Cicilan yang jatuh tempo tetap harus dibayar, tapi dendanya nggak boleh dilebihin dari perjanjian. Kalau lagi berat, bisa minta callback buat bahas ulang tenor, bukan janji penghapusan denda. Mau bahas cicilan yang mana?",
+      "state": "DISCOVERY",
+      "fallback": false,
+      "sources": [
+        {
+          "record_id": "kb_id_colloquial_c001",
+          "chunk_id": "chunk_001",
+          "title": "Cicilan Bahasa Sehari-hari",
+          "source": "indonesia/colloquial.md",
+          "source_url": "",
+          "section": "Cicilan",
+          "category": "faq",
+          "version": "1.0",
+          "score": 0.2359
+        }
+      ]
+    }
+  ]
+}

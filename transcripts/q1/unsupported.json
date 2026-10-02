@@ -1,0 +1,62 @@
+{
+  "scenario": "health:unsupported",
+  "call_id": "7aea80e9c38c491aa82e8dd89c9132cb",
+  "final_state": "ESCALATED",
+  "escalated": true,
+  "qualification": {
+    "insurance_requirement": "health insurance"
+  },
+  "eligibility": null,
+  "mode": "mock_web",
+  "turns": [
+    {
+      "speaker": "agent",
+      "text": "Hello, this is Dana from Darwix Health on a web session. I can help you check a health-insurance lead. Do you consent to continue and to let me use your answers for this qualification?",
+      "state": "CONSENT"
+    },
+    {
+      "speaker": "customer",
+      "text": "Yes I consent"
+    },
+    {
+      "speaker": "agent",
+      "text": "What kind of health insurance do you need?",
+      "state": "DISCOVERY",
+      "fallback": false,
+      "sources": []
+    },
+    {
+      "speaker": "customer",
+      "text": "I need health insurance."
+    },
+    {
+      "speaker": "agent",
+      "text": "What is your full name?",
+      "state": "QUALIFICATION",
+      "fallback": false,
+      "sources": []
+    },
+    {
+      "speaker": "customer",
+      "text": "What is the capital of France?"
+    },
+    {
+      "speaker": "agent",
+      "text": "I don't have verified information about that in my knowledge base. I can connect you with a human representative. What is your full name?",
+      "state": "FAQ",
+      "fallback": true,
+      "sources": []
+    },
+    {
+      "speaker": "customer",
+      "text": "I want to speak to a human representative."
+    },
+    {
+      "speaker": "agent",
+      "text": "I am escalating this web session to a human representative. I will stop the qualification here.",
+      "state": "ESCALATED",
+      "fallback": false,
+      "sources": []
+    }
+  ]
+}

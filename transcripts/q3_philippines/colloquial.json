@@ -1,0 +1,50 @@
+{
+  "scenario": "philippines:colloquial",
+  "call_id": "ec18677a11db440aafbe3ccaa87d374a",
+  "final_state": "DISCOVERY",
+  "escalated": false,
+  "qualification": {},
+  "eligibility": null,
+  "mode": "mock_web",
+  "turns": [
+    {
+      "speaker": "agent",
+      "text": "Hi, magandang araw. Ako si Dana from Darwix Assurance. May one minute ka ba? Tatawag ako tungkol sa life insurance na pwedeng i-link sa bank account mo.",
+      "state": "CONSENT"
+    },
+    {
+      "speaker": "customer",
+      "text": "Oo, sige."
+    },
+    {
+      "speaker": "agent",
+      "text": "Anong klaseng life cover ang tinitingnan mo, individual o may rider?",
+      "state": "DISCOVERY",
+      "fallback": false,
+      "sources": []
+    },
+    {
+      "speaker": "customer",
+      "text": "Pre, ang mahal, di ko kaya yan."
+    },
+    {
+      "speaker": "agent",
+      "text": "Kung masabi ng customer na mahal ang premium, huwag mag-promise ng discount na wala sa rate card. Kapag kulang ang balance bago ang due date, pwedeng ma-lapse ang policy. Pwedeng mag-schedule ng callback sa halip na ipilit ang sale. Anong klaseng life cover ang tinitingnan mo, individual o may rider?",
+      "state": "DISCOVERY",
+      "fallback": false,
+      "sources": [
+        {
+          "record_id": "kb_ph_objection_c001",
+          "chunk_id": "chunk_001",
+          "title": "Premium At Lapse",
+          "source": "philippines/objection_tl.md",
+          "source_url": "",
+          "section": "Objection",
+          "category": "objection",
+          "version": "1.0",
+          "score": 0.1661
+        }
+      ]
+    }
+  ]
+}

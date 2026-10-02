@@ -1,0 +1,140 @@
+{
+  "scenario": "indonesia:cooperative",
+  "call_id": "4a3d530e16964d0183b429575938f657",
+  "final_state": "END",
+  "escalated": false,
+  "qualification": {
+    "insurance_requirement": "Pembiayaan kendaraan",
+    "name": "Sari Wulandari",
+    "budget_range": 1500000,
+    "tenor": "24 bulan",
+    "current_insurance": "jatuh tempo",
+    "callback_preference": "besok pagi"
+  },
+  "eligibility": {
+    "eligible": null,
+    "status": "lead_captured",
+    "reasons": [
+      "preliminary lead only; no underwriting decision was made"
+    ]
+  },
+  "mode": "mock_web",
+  "turns": [
+    {
+      "speaker": "agent",
+      "text": "Selamat pagi, Bapak/Ibu. Saya dari layanan pembiayaan. Cicilan Bapak/Ibu akan jatuh tempo. Apakah sekarang waktu yang tepat?",
+      "state": "CONSENT"
+    },
+    {
+      "speaker": "customer",
+      "text": "Ya, silakan."
+    },
+    {
+      "speaker": "agent",
+      "text": "Produk pembiayaan yang mana yang ingin kita bahas?",
+      "state": "DISCOVERY",
+      "fallback": false,
+      "sources": []
+    },
+    {
+      "speaker": "customer",
+      "text": "Pembiayaan kendaraan."
+    },
+    {
+      "speaker": "agent",
+      "text": "Siapa nama Bapak/Ibu?",
+      "state": "QUALIFICATION",
+      "fallback": false,
+      "sources": []
+    },
+    {
+      "speaker": "customer",
+      "text": "Nama saya Sari Wulandari."
+    },
+    {
+      "speaker": "agent",
+      "text": "Berapa nilai cicilan per bulan yang sedang berjalan?",
+      "state": "QUALIFICATION",
+      "fallback": false,
+      "sources": []
+    },
+    {
+      "speaker": "customer",
+      "text": "Cicilan saya 1500000."
+    },
+    {
+      "speaker": "agent",
+      "text": "Berapa tenor yang tertera di perjanjian?",
+      "state": "QUALIFICATION",
+      "fallback": false,
+      "sources": []
+    },
+    {
+      "speaker": "customer",
+      "text": "Tenor 24 bulan."
+    },
+    {
+      "speaker": "agent",
+      "text": "Apakah angsuran bulan ini sudah jatuh tempo, atau masih sebelum tanggalnya?",
+      "state": "QUALIFICATION",
+      "fallback": false,
+      "sources": []
+    },
+    {
+      "speaker": "customer",
+      "text": "Angsuran bulan ini sudah jatuh tempo."
+    },
+    {
+      "speaker": "agent",
+      "text": "Kapan waktu yang tepat jika perlu callback?",
+      "state": "QUALIFICATION",
+      "fallback": false,
+      "sources": []
+    },
+    {
+      "speaker": "customer",
+      "text": "Besok pagi."
+    },
+    {
+      "speaker": "agent",
+      "text": "Data ini cukup untuk pencatatan awal. Ini belum persetujuan. Denda keterlambatan mengikuti perjanjian pembiayaan dan tidak boleh ditambah di luar perjanjian. Uang muka atau DP yang sudah dibayar tidak otomatis menggugurkan cicilan berikutnya. Tenor dapat dibahas ulang hanya melalui petugas yang berwenang.",
+      "state": "ELIGIBILITY",
+      "fallback": false,
+      "sources": [
+        {
+          "record_id": "kb_id_formal_c001",
+          "chunk_id": "chunk_001",
+          "title": "Pengingat Cicilan Formal",
+          "source": "indonesia/formal.md",
+          "source_url": "",
+          "section": "Cicilan",
+          "category": "faq",
+          "version": "1.0",
+          "score": 0.2969
+        }
+      ]
+    },
+    {
+      "speaker": "customer",
+      "text": "Ya, buat ringkasannya."
+    },
+    {
+      "speaker": "agent",
+      "text": "Ringkasan percakapan. Nama: Sari Wulandari. Produk: Pembiayaan kendaraan. Cicilan: 1500000. Tenor: 24 bulan. Status cicilan: jatuh tempo. Callback: besok pagi. Ini pencatatan awal, bukan persetujuan. Data sintetis. Apakah saya akhiri sesi web ini?",
+      "state": "SUMMARY",
+      "fallback": false,
+      "sources": []
+    },
+    {
+      "speaker": "customer",
+      "text": "Ya"
+    },
+    {
+      "speaker": "agent",
+      "text": "Terima kasih atas waktunya. Saya akhiri percakapan ini.",
+      "state": "END",
+      "fallback": false,
+      "sources": []
+    }
+  ]
+}

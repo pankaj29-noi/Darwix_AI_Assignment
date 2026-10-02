@@ -1,0 +1,55 @@
+{
+  "language": ["en", "fil", "tl"],
+  "locale": "en-PH",
+  "sector": "life_insurance_bancassurance",
+  "terminology": {
+    "premium": "monthly price of the life policy, often auto-debited from a bank account",
+    "policy": "the life insurance contract, not a bank deposit",
+    "beneficiary": "the person who receives the benefit on an approved claim",
+    "rider": "an optional add-on such as accident cover",
+    "lapse": "the policy stops when a due premium is not paid",
+    "coverage": "what the policy pays for, not a guaranteed investment return",
+    "bank_referral": "the branch introduced the customer; the product is still insurance"
+  },
+  "politeness": {
+    "particles": ["po", "opo"],
+    "style": "Warm call-center Taglish. Use po when the customer uses po. Do not switch to stiff formal Filipino or to English-only mid-sentence.",
+    "honorific": "first name plus po, not sir/ma'am stacked on every line"
+  },
+  "date_format": "D MMMM YYYY, for example 2 Marso 2026. Spoken dates use bukas, mamaya, or an explicit weekday.",
+  "currency": {
+    "code": "PHP",
+    "spoken": "pesos",
+    "example": "2,000 pesos kada buwan"
+  },
+  "asr": {
+    "provider_env": "ASR_PROVIDER",
+    "languages": ["en-PH", "fil-PH", "tl-PH"],
+    "code_switching": "Taglish must stay one utterance, not two translated turns"
+  },
+  "tts": {
+    "preferred_voices": ["fil-PH", "tl-PH"],
+    "compromise": "If the OS has no Filipino voice, browser TTS may fall back to an English voice. That compromise must be shown in the UI."
+  },
+  "fallback": "Wala po akong verified na impormasyon tungkol diyan sa knowledge base. Pwede kitang i-connect sa isang tao mula sa team.",
+  "examples": [
+    {
+      "id": "greeting",
+      "text": "Hi, magandang araw. Ako si Dana from Darwix Assurance. May one minute ka ba? Tatawag ako tungkol sa life insurance na pwedeng i-link sa bank account mo.",
+      "literal_translation_to_avoid": "Good day. I am Dana from Darwix Assurance. Do you have one minute? I am calling about life insurance that can be linked to your bank account.",
+      "why_localization": "The line is Taglish, the register used on Philippine bancassurance calls. It uses a time-check, a first name, and bank-link wording. A full Filipino translation would sound like a written notice, and a full English line would drop the code-switch customers actually answer."
+    },
+    {
+      "id": "objection",
+      "text": "Gets ko po. Maraming nahihirapan sa premium. Pwede nating tingnan ang coverage na swak sa budget, o i-schedule ang callback. Ayokong ma-lapse ka dahil pinilit natin ang plan na hindi kaya.",
+      "literal_translation_to_avoid": "I understand. Many people struggle with the premium. We can look at coverage that fits the budget, or schedule a callback. I do not want you to lapse because we forced a plan you cannot afford.",
+      "why_localization": "Gets ko, swak, and po are local stance markers. Lapse and premium stay in the English insurance terms Filipinos use. The sentence refuses a forced sale, which is the local objection, instead of translating a generic discount script."
+    },
+    {
+      "id": "payment",
+      "text": "Ang premium ay naka-auto-debit every month sa savings account mo sa partner bank. Bank referral lang ang branch. Ang beneficiary ang tatanggap ng benefit, at may optional accident rider kung pasado. Kapag kulang ang balance bago ang due date, pwedeng ma-lapse ang policy. Hindi deposit ang coverage na ito.",
+      "literal_translation_to_avoid": "The premium is automatically debited every month from your savings account at the partner bank. The branch only gave a referral. If the balance is short before the due date, the policy may lapse. This is not a deposit.",
+      "why_localization": "It keeps premium, policy, lapse, and bank referral as spoken in bancassurance, then explains in the same breath that the product is not a deposit. That warning is a Philippine bank-channel concern, not a word-for-word rendering of a generic payment paragraph."
+    }
+  ]
+}

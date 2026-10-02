@@ -1,0 +1,43 @@
+{
+  "scenario": "full_demo",
+  "description": "One health call that passes several signal types while the replay is still running.",
+  "signal_count": 6,
+  "nudge_count": 5,
+  "nudges": [
+    {
+      "type": "missed_opportunity",
+      "text": "Customer mentioned family members who may need cover. Ask whether a family floater is relevant.",
+      "confidence": 0.83,
+      "evidence": "My wife also needs cover, and we have two kids.",
+      "offset_ms": 8000
+    },
+    {
+      "type": "compliance",
+      "text": "Required waiting-period disclosure may be missing. Confirm that disclosure before proceeding.",
+      "confidence": 0.88,
+      "evidence": "I can mark you eligible right now.",
+      "offset_ms": 18000
+    },
+    {
+      "type": "buying_signal",
+      "text": "Customer showed a buying signal. Confirm needs and required disclosures before proceeding.",
+      "confidence": 0.84,
+      "evidence": "I want to purchase today.",
+      "offset_ms": 26000
+    },
+    {
+      "type": "frustration",
+      "text": "Customer appears frustrated. Acknowledge the concern before continuing.",
+      "confidence": 0.86,
+      "evidence": "This is ridiculous. You are not listening.",
+      "offset_ms": 40000
+    },
+    {
+      "type": "callback",
+      "text": "Customer asked for a callback. Confirm the time and pause the pitch.",
+      "confidence": 0.86,
+      "evidence": "Can you call me back after 6? I am busy now.",
+      "offset_ms": 55000
+    }
+  ]
+}

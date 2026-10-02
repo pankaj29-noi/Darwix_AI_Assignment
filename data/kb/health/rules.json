@@ -1,0 +1,19 @@
+{
+  "min_age": 18,
+  "max_age": 65,
+  "min_budget_inr": 500,
+  "serviceable_locations": [
+    "pune",
+    "mumbai",
+    "delhi",
+    "bengaluru",
+    "bangalore",
+    "hyderabad",
+    "chennai",
+    "jaipur",
+    "kolkata",
+    "ahmedabad",
+    "lucknow"
+  ],
+  "required_disclosures": ["waiting period"]
+}

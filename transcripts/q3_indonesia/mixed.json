@@ -1,0 +1,50 @@
+{
+  "scenario": "indonesia:mixed",
+  "call_id": "3770a058cd804368be050318b0b2dfaf",
+  "final_state": "DISCOVERY",
+  "escalated": false,
+  "qualification": {},
+  "eligibility": null,
+  "mode": "mock_web",
+  "turns": [
+    {
+      "speaker": "agent",
+      "text": "Selamat pagi, Bapak/Ibu. Saya dari layanan pembiayaan. Cicilan Bapak/Ibu akan jatuh tempo. Apakah sekarang waktu yang tepat?",
+      "state": "CONSENT"
+    },
+    {
+      "speaker": "customer",
+      "text": "Ya, silakan."
+    },
+    {
+      "speaker": "agent",
+      "text": "Produk pembiayaan yang mana yang ingin kita bahas?",
+      "state": "DISCOVERY",
+      "fallback": false,
+      "sources": []
+    },
+    {
+      "speaker": "customer",
+      "text": "Tenornya bisa di-extend? DP saya sudah lunas tapi installment bulan ini berat."
+    },
+    {
+      "speaker": "agent",
+      "text": "Denda keterlambatan mengikuti perjanjian pembiayaan dan tidak boleh ditambah di luar perjanjian. Uang muka atau DP yang sudah dibayar tidak otomatis menggugurkan cicilan berikutnya. Ini data demo sintetis. Produk pembiayaan yang mana yang ingin kita bahas?",
+      "state": "DISCOVERY",
+      "fallback": false,
+      "sources": [
+        {
+          "record_id": "kb_id_formal_c001",
+          "chunk_id": "chunk_001",
+          "title": "Pengingat Cicilan Formal",
+          "source": "indonesia/formal.md",
+          "source_url": "",
+          "section": "Cicilan",
+          "category": "faq",
+          "version": "1.0",
+          "score": 0.1374
+        }
+      ]
+    }
+  ]
+}

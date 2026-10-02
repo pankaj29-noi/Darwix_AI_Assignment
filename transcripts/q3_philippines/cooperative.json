@@ -1,0 +1,164 @@
+{
+  "scenario": "philippines:cooperative",
+  "call_id": "34ec495324904dad9e3fc3688ea1d100",
+  "final_state": "END",
+  "escalated": false,
+  "qualification": {
+    "insurance_requirement": "bancassurance life insurance",
+    "name": "Juan Dela Cruz",
+    "location": "Quezon City",
+    "bank_customer": "partner-bank customer",
+    "beneficiary": "Maria Dela Cruz, asawa ko",
+    "budget_range": 2000,
+    "current_insurance": "none",
+    "callback_preference": "bukas ng umaga"
+  },
+  "eligibility": {
+    "eligible": null,
+    "status": "lead_captured",
+    "reasons": [
+      "preliminary lead only; no underwriting decision was made"
+    ]
+  },
+  "mode": "mock_web",
+  "turns": [
+    {
+      "speaker": "agent",
+      "text": "Hi, magandang araw. Ako si Dana from Darwix Assurance. May one minute ka ba? Tatawag ako tungkol sa life insurance na pwedeng i-link sa bank account mo.",
+      "state": "CONSENT"
+    },
+    {
+      "speaker": "customer",
+      "text": "Oo, sige po."
+    },
+    {
+      "speaker": "agent",
+      "text": "Anong klaseng life cover ang tinitingnan mo, individual o may rider?",
+      "state": "DISCOVERY",
+      "fallback": false,
+      "sources": []
+    },
+    {
+      "speaker": "customer",
+      "text": "Gusto ko ng life insurance na naka-link sa bank."
+    },
+    {
+      "speaker": "agent",
+      "text": "Ano po ang pangalan mo?",
+      "state": "QUALIFICATION",
+      "fallback": false,
+      "sources": []
+    },
+    {
+      "speaker": "customer",
+      "text": "Ako si Juan Dela Cruz."
+    },
+    {
+      "speaker": "agent",
+      "text": "Saang lungsod ka nakatira?",
+      "state": "QUALIFICATION",
+      "fallback": false,
+      "sources": []
+    },
+    {
+      "speaker": "customer",
+      "text": "Taga Quezon City ako."
+    },
+    {
+      "speaker": "agent",
+      "text": "May savings account ka na ba sa partner bank, o wala pa?",
+      "state": "QUALIFICATION",
+      "fallback": false,
+      "sources": []
+    },
+    {
+      "speaker": "customer",
+      "text": "May savings account ako sa partner bank."
+    },
+    {
+      "speaker": "agent",
+      "text": "Sino ang beneficiary na gusto mo, halimbawa asawa o anak?",
+      "state": "QUALIFICATION",
+      "fallback": false,
+      "sources": []
+    },
+    {
+      "speaker": "customer",
+      "text": "Beneficiary ko si Maria Dela Cruz, asawa ko."
+    },
+    {
+      "speaker": "agent",
+      "text": "Magkano ang premium kada buwan na swak sa budget mo, in pesos?",
+      "state": "QUALIFICATION",
+      "fallback": false,
+      "sources": []
+    },
+    {
+      "speaker": "customer",
+      "text": "Kaya ko ang premium na 2000 pesos kada buwan."
+    },
+    {
+      "speaker": "agent",
+      "text": "May existing life policy ka na ba, o wala pa?",
+      "state": "QUALIFICATION",
+      "fallback": false,
+      "sources": []
+    },
+    {
+      "speaker": "customer",
+      "text": "Wala pa akong existing policy."
+    },
+    {
+      "speaker": "agent",
+      "text": "Kailan puwedeng tumawag ulit kung kailangan ng follow-up?",
+      "state": "QUALIFICATION",
+      "fallback": false,
+      "sources": []
+    },
+    {
+      "speaker": "customer",
+      "text": "Tumawag kayo bukas ng umaga."
+    },
+    {
+      "speaker": "agent",
+      "text": "Sapat na ito para sa preliminary lead. Hindi pa ito approval. Ang premium ay pwedeng i-auto-debit mula sa savings account sa partner bank. Bank referral ibig sabihin ang branch ang nagpakilala sa iyo, pero ang policy ay life insurance, hindi deposit. Ang beneficiary ang tatanggap ng benefit kapag may approved claim.",
+      "state": "ELIGIBILITY",
+      "fallback": false,
+      "sources": [
+        {
+          "record_id": "kb_ph_payment_c001",
+          "chunk_id": "chunk_001",
+          "title": "Premium Payment At Bank Referral",
+          "source": "philippines/payment_tl.md",
+          "source_url": "",
+          "section": "Payment",
+          "category": "faq",
+          "version": "1.0",
+          "score": 0.3246
+        }
+      ]
+    },
+    {
+      "speaker": "customer",
+      "text": "Sige, pakibuo ang usapan."
+    },
+    {
+      "speaker": "agent",
+      "text": "Ito ang buod ng usapan, base sa sinabi mo at sa knowledge base: Pangalan: Juan Dela Cruz. Lungsod: Quezon City. Bank: partner-bank customer. Beneficiary: Maria Dela Cruz, asawa ko. Premium: 2000 pesos kada buwan. Existing policy: none. Callback: bukas ng umaga. Preliminary lead lang ito, hindi pa approval. Synthetic demo data. Tatapusin ko na ba ang web session?",
+      "state": "SUMMARY",
+      "fallback": false,
+      "sources": []
+    },
+    {
+      "speaker": "customer",
+      "text": "Oo"
+    },
+    {
+      "speaker": "agent",
+      "text": "Salamat sa oras mo. Tatapusin ko na ang call na ito. Ingat.",
+      "state": "END",
+      "fallback": false,
+      "sources": []
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "scenario": "health:objection",
+  "call_id": "989eb69cfdb44d469f13162c823bafd5",
+  "final_state": "OBJECTION",
+  "escalated": false,
+  "qualification": {
+    "insurance_requirement": "health insurance",
+    "name": "Arjun Mehta",
+    "age": 41,
+    "location": "Jaipur"
+  },
+  "eligibility": null,
+  "mode": "mock_web",
+  "turns": [
+    {
+      "speaker": "agent",
+      "text": "Hello, this is Dana from Darwix Health on a web session. I can help you check a health-insurance lead. Do you consent to continue and to let me use your answers for this qualification?",
+      "state": "CONSENT"
+    },
+    {
+      "speaker": "customer",
+      "text": "Yes I agree"
+    },
+    {
+      "speaker": "agent",
+      "text": "What kind of health insurance do you need?",
+      "state": "DISCOVERY",
+      "fallback": false,
+      "sources": []
+    },
+    {
+      "speaker": "customer",
+      "text": "I need health insurance."
+    },
+    {
+      "speaker": "agent",
+      "text": "What is your full name?",
+      "state": "QUALIFICATION",
+      "fallback": false,
+      "sources": []
+    },
+    {
+      "speaker": "customer",
+      "text": "My name is Arjun Mehta."
+    },
+    {
+      "speaker": "agent",
+      "text": "What is your age in years?",
+      "state": "QUALIFICATION",
+      "fallback": false,
+      "sources": []
+    },
+    {
+      "speaker": "customer",
+      "text": "I am 41 years old."
+    },
+    {
+      "speaker": "agent",
+      "text": "Which city do you live in?",
+      "state": "QUALIFICATION",
+      "fallback": false,
+      "sources": []
+    },
+    {
+      "speaker": "customer",
+      "text": "I live in Jaipur."
+    },
+    {
+      "speaker": "agent",
+      "text": "Who should be covered: just you, or family members as well?",
+      "state": "QUALIFICATION",
+      "fallback": false,
+      "sources": []
+    },
+    {
+      "speaker": "customer",
+      "text": "The premium is too expensive for me."
+    },
+    {
+      "speaker": "agent",
+      "text": "If the customer says the premium is too expensive, explain the monthly budget option and the co-pay choice, and do not promise a discount that is not on the rate card. Who should be covered: just you, or family members as well?",
+      "state": "OBJECTION",
+      "fallback": false,
+      "sources": [
+        {
+          "record_id": "kb_health_objection_c001",
+          "chunk_id": "chunk_001",
+          "title": "Premium Objection Handling",
+          "source": "health/objections.md",
+          "source_url": "",
+          "section": "Objection",
+          "category": "objection",
+          "version": "1.0",
+          "score": 0.2495
+        }
+      ]
+    }
+  ]
+}

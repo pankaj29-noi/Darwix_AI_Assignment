@@ -1,0 +1,64 @@
+{
+  "scenario": "health:incomplete",
+  "call_id": "098cb9c726f0460ab2b9a6c330d1254e",
+  "final_state": "QUALIFICATION",
+  "escalated": false,
+  "qualification": {
+    "insurance_requirement": "health insurance",
+    "name": "Neha Iyer",
+    "age": "not provided"
+  },
+  "eligibility": null,
+  "mode": "mock_web",
+  "turns": [
+    {
+      "speaker": "agent",
+      "text": "Hello, this is Dana from Darwix Health on a web session. I can help you check a health-insurance lead. Do you consent to continue and to let me use your answers for this qualification?",
+      "state": "CONSENT"
+    },
+    {
+      "speaker": "customer",
+      "text": "Yes I consent"
+    },
+    {
+      "speaker": "agent",
+      "text": "What kind of health insurance do you need?",
+      "state": "DISCOVERY",
+      "fallback": false,
+      "sources": []
+    },
+    {
+      "speaker": "customer",
+      "text": "I need health insurance."
+    },
+    {
+      "speaker": "agent",
+      "text": "What is your full name?",
+      "state": "QUALIFICATION",
+      "fallback": false,
+      "sources": []
+    },
+    {
+      "speaker": "customer",
+      "text": "My name is Neha Iyer."
+    },
+    {
+      "speaker": "agent",
+      "text": "What is your age in years?",
+      "state": "QUALIFICATION",
+      "fallback": false,
+      "sources": []
+    },
+    {
+      "speaker": "customer",
+      "text": "I would rather not share more right now."
+    },
+    {
+      "speaker": "agent",
+      "text": "Which city do you live in?",
+      "state": "QUALIFICATION",
+      "fallback": false,
+      "sources": []
+    }
+  ]
+}
